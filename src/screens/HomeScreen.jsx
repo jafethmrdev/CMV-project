@@ -108,7 +108,7 @@ function HomeScreen() {
           color={"black"}
           textAlign={"center"}
           fontStyle={"oblique"}
-          variant={"h2"}
+          variant={"h3"}
         >
           VISIÓN
         </Typography>
@@ -136,7 +136,7 @@ function HomeScreen() {
               textAlign={"center"}
               fontStyle={"oblique"}
               paddingBottom={4}
-              variant={"h2"}
+              variant={"h4"}
             >
               VALORES
             </Typography>
@@ -200,7 +200,7 @@ function HomeScreen() {
               textAlign={"center"}
               fontStyle={"oblique"}
               paddingBottom={4}
-              variant={"h2"}
+              variant={"h4"}
             >
               ADN
             </Typography>
@@ -278,15 +278,15 @@ function HomeScreen() {
           color={"black"}
           textAlign={"center"}
           fontStyle={"oblique"}
-          variant={"h2"}
+          variant={"h3"}
         >
           REDES Y DEPARTAMENTOS
         </Typography>
 
-        <div className="grid grid-cols-2">
+        <div className="grid grid-cols-2 m-auto w-auto">
           <div
             style={{ height: 400 }}
-            className=" m-auto justify-center align-middle pt-10"
+            className=" justify-center align-middle pt-10"
             sx
           >
             <Typography
@@ -295,7 +295,7 @@ function HomeScreen() {
               textAlign={"center"}
               fontStyle={"oblique"}
               paddingBottom={4}
-              variant={"h2"}
+              variant={"h4"}
             >
               REDES
             </Typography>
@@ -351,7 +351,7 @@ function HomeScreen() {
           </div>
           <div
             style={{ height: 400 }}
-            className=" m-auto justify-center align-middle p-10 "
+            className=" justify-center align-middle p-10 "
           >
             <Typography
               alignSelf={"center"}
@@ -359,7 +359,7 @@ function HomeScreen() {
               textAlign={"center"}
               fontStyle={"oblique"}
               paddingBottom={4}
-              variant={"h2"}
+              variant={"h4"}
             >
               DEPARTAMENTOS
             </Typography>
@@ -434,7 +434,7 @@ function HomeScreen() {
       <Divider />
       <div
         style={{ height: 400 }}
-        className="bg-zinc-100 m-auto justify-center align-middle flex-auto pt-10 pl-6"
+        className="bg-zinc-100 m-auto justify-center align-middle pt-10 pl-6"
         sx
       >
         <Typography
@@ -446,11 +446,19 @@ function HomeScreen() {
         >
           ¡Alabanzas!
         </Typography>
-        <div className="grid grid-cols-3 m-auto justify-center align-middle flex-auto pt-5">
-          <CustomAudioPlayer />
-          <CustomAudioPlayer />
-          <CustomAudioPlayer />
-        </div>
+        <Grid
+          direction="row"
+          align="center"
+          alignItems="center"
+          justify="center"
+          sx={{ paddingTop: 5 }}
+        >
+          <Grid container item xs={4} alignItems="center" justify="center">
+            <Grid>
+              <CustomAudioPlayer />
+            </Grid>
+          </Grid>
+        </Grid>
       </div>
       <Divider />
       <div
@@ -475,21 +483,24 @@ function HomeScreen() {
 
         <div
           style={{
-            overflow: "hidden",
             width: "100%",
+            justifySelf: "center",
             justifyContent: "center",
             alignContent: "center",
-            paddingLeft: 800,
+            alignItems: "center",
             paddingTop: 15,
-            height: 500,
+            height: 1000,
           }}
         >
           <div
             style={{
-              overflow: "hidden",
               width: "100%",
               maxWidth: "326px",
-              height: 390,
+              justifySelf: "center",
+              justifyContent: "center",
+              alignContent: "center",
+              alignItems: "center",
+              height: 1000,
             }}
           >
             <IGEmbed url="https://www.instagram.com/p/Cinxz1nvM2f/" />
