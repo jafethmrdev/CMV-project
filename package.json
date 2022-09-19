@@ -21,6 +21,7 @@
     "@mui/styled-engine-sc": "^5.10.3",
     "@mui/styles": "^5.10.3",
     "@react-spring/web": "^9.5.4",
+    "gh-pages": "^4.0.0",
     "material-ui-audio-player": "^1.7.1",
     "material-ui-image": "^3.3.2",
     "material-ui-player": "^1.0.10",
