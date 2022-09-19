@@ -9,25 +9,30 @@ const image1 =
 function ImageParallax() {
   return (
     <div style={styles}>
-      <Parallax bgImage={pastores} strength={1000} >
-        <div style={{ height: 700, width: "100%", paddingTop: 300 }}>
+      <Parallax bgImage={pastores} strength={1000}>
+        <div style={{ height: 700, width: "100%", paddingTop: 200 }}>
           <Typography
             alignSelf={"center"}
             color={"whitesmoke"}
             textAlign={"center"}
-            fontSize={40}
+            fontSize={120}
             fontStyle={"oblique"}
+            fontFamily={"'Palace Script MT', sans-serif"}
             paddingBottom={5}
+            variant={"h1"}
+            style={{ textShadow: "2px 2px 3px black" }}
           >
             ¡Nuestros Pastores!
           </Typography>
           <Typography
             component={"span"}
-            variant={"body2"}
+            variant={"h2"}
             alignSelf={"center"}
             color={"whitesmoke"}
             textAlign={"center"}
-            fontSize={30}
+            fontSize={70}
+            fontFamily={"'Palace Script MT', sans-serif"}
+            style={{ textShadow: "2px 2px 3px black" }}
           >
             Jose Rosales y Karen Lizarazo
           </Typography>

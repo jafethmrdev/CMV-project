@@ -26,14 +26,14 @@ function HomeScreen() {
         <Slideshow />
       </div>
       <div
-        className="bg-zinc-100 h-96 m-auto justify-center align-middle pt-36"
+        className="bg-zinc-100 h-72 m-auto justify-center align-middle pt-24"
         sx
       >
         <Typography
           alignSelf={"center"}
           color={"black"}
           textAlign={"center"}
-          fontSize={30}
+          fontSize={40}
           fontStyle={"oblique"}
         >
           ¡Un lugar para la familia!
@@ -42,7 +42,7 @@ function HomeScreen() {
           alignSelf={"center"}
           color={"black"}
           textAlign={"center"}
-          fontSize={20}
+          fontSize={25}
         >
           <p>
             Somos una iglesia enfocada en la transformación y Restauración de la
@@ -56,7 +56,7 @@ function HomeScreen() {
 
       <div
         style={{ height: 300 }}
-        className="bg-zinc-800 m-auto justify-center align-middle p-24 "
+        className="bg-zinc-800 m-auto justify-center align-middle p-16 "
       >
         <Typography
           alignSelf={"center"}
@@ -73,38 +73,40 @@ function HomeScreen() {
           color={"whitesmoke"}
           textAlign={"center"}
           fontSize={20}
+          variant={"inherit"}
         >
-          <p className="mx-56">
-            Disfruta de la Presencia de Dios en nuestra auditorio. Estamos
+         
+            Disfruta de la Presencia de Dios en nuestro auditorio. Estamos
             abiertos los domingos en el horario 9:30 AM. Tambien puedes
             disfrutar de nuestros grupos de conexiones: Grupo parejas, Grupo de
             jovenes, Grupo de mujeres, entre otros. Te invitamos tambien a los
             grupos de sanacion y hacedores de disipulos. ¡Te Esperamos!
-          </p>
+        
         </Typography>
       </div>
       <div
-        className="bg-zinc-100 h-96 m-auto justify-center align-middle pt-36"
+        className="bg-zinc-100 h-72 m-auto justify-center align-middle pt-20"
         sx
       >
         <Typography
           alignSelf={"center"}
           color={"black"}
           textAlign={"center"}
-          fontSize={30}
           fontStyle={"oblique"}
+          variant={"h2"}
         >
-          ¡Un lugar para la familia!
+        VISIÓN
         </Typography>
         <Typography
           alignSelf={"center"}
           color={"black"}
           textAlign={"center"}
-          fontSize={20}
+
+          variant={"h5"}
         >
           <p>
-            Somos una iglesia enfocada en la transformación y Restauración de la
-            familia, y llevar al hombre al conocimiento de Dios.
+          Ser una Iglesia que en Cristo restaura y fortalece integralmente a toda la familia.
+
           </p>
         </Typography>
       </div>
