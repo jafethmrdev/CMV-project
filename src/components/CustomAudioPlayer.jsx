@@ -22,7 +22,7 @@ function CustomAudioPlayer() {
       <Card
         sx={{
           display: "flex",
-          width: 250,
+          width: 300,
           height: 250,
           justifyContent: "center",
         }}
