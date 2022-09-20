@@ -10,33 +10,43 @@ function Slideshow() {
   const images = [slide1, slide2, slide3, slide4];
 
   return (
-    <Zoom scale={1.4} indicators={false} duration={3000}>
-      {images.map((each, index) => (
-        <div
-          key={index}
-          style={{
-            width: "100%",
-            justifyContent: "center",
-            alignContent: "center",
-            alignItems: "center",
-            alignSelf: "center",
-          }}
-        >
-          <img
+    <div
+      className="bg-zinc-800 "
+      style={{
+        justifyContent: "center",
+        alignContent: "center",
+        alignItems: "center",
+        alignSelf: "center",
+      }}
+    >
+      <Zoom scale={1.4} indicators={false} duration={3000}>
+        {images.map((each, index) => (
+          <div
+            key={index}
             style={{
-              objectFit: "fill",
               width: "100%",
               justifyContent: "center",
               alignContent: "center",
               alignItems: "center",
               alignSelf: "center",
             }}
-            alt="Slide Image"
-            src={each}
-          />
-        </div>
-      ))}
-    </Zoom>
+          >
+            <img
+              style={{
+                objectFit: "fill",
+                width: "100%",
+                justifyContent: "center",
+                alignContent: "center",
+                alignItems: "center",
+                alignSelf: "center",
+              }}
+              alt="Slide Image"
+              src={each}
+            />
+          </div>
+        ))}
+      </Zoom>
+    </div>
   );
 }
 
