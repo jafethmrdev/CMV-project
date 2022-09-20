@@ -1,21 +1,24 @@
 import * as React from "react";
 import ResponsiveAppBar from "../components/ResponsiveAppBar";
 import {
+  Container,
   CssBaseline,
   Divider,
-  Grid,
   List,
   ListItem,
   ListItemText,
   Typography,
 } from "@mui/material";
+import Grid from "@mui/material/Unstable_Grid2";
 import Slideshow from "../components/Slideshow";
 import SocialBanner from "../components/SocialBanner";
 import ImageParallax from "../components/ImageParallax";
 import Footer from "../components/Footer";
 import CustomAudioPlayer from "../components/CustomAudioPlayer";
 import { IGEmbed } from "react-ig-embed";
-import { Fade } from "@material-ui/core";
+import Fade from "react-reveal/Fade";
+import Slide from "react-reveal/Slide";
+import LightSpeed from "react-reveal/LightSpeed";
 
 function HomeScreen() {
   return (
@@ -36,231 +39,181 @@ function HomeScreen() {
         <Slideshow />
       </div>
 
-      <Fade in={true}>
-        <div
-          className="bg-zinc-100 h-72 m-auto justify-center align-middle pt-24"
-          sx
-        >
-          <Typography
-            alignSelf={"center"}
-            color={"black"}
-            textAlign={"center"}
-            fontSize={40}
-            fontStyle={"oblique"}
-          >
-            ¡Un lugar para la familia!
-          </Typography>
-          <Typography
-            alignSelf={"center"}
-            color={"black"}
-            textAlign={"center"}
-            fontSize={25}
-          >
-            <p>
+      <div className="bg-zinc-100 h-auto m-auto justify-center align-middle pt-16 pb-10">
+        <Container className="container rounded">
+          <Slide top duration={3000}>
+            <Typography
+              alignSelf={"center"}
+              color={"black"}
+              textAlign={"center"}
+              fontSize={40}
+              fontStyle={"oblique"}
+            >
+              ¡Un lugar para la familia!
+            </Typography>
+            <Typography
+              alignSelf={"center"}
+              color={"black"}
+              textAlign={"center"}
+              fontSize={25}
+              component={"span"}
+            >
               Somos una iglesia enfocada en la transformación y Restauración de
               la familia, y llevar al hombre al conocimiento de Dios.
-            </p>
-          </Typography>
-        </div>
-      </Fade>
+            </Typography>
+          </Slide>
+        </Container>
+      </div>
 
       <div>
         <ImageParallax />
       </div>
 
       <div
-        style={{ height: 300 }}
+        style={{ height: "auto" }}
         className="bg-zinc-800 m-auto justify-center align-middle p-16 "
       >
-        <Typography
-          alignSelf={"center"}
-          color={"whitesmoke"}
-          textAlign={"center"}
-          fontSize={30}
-          fontStyle={"oblique"}
-          paddingBottom={5}
-        >
-          ¡Iglesia CVM Barranquilla te invita a visitarnos de manera presencial!
-        </Typography>
-        <Typography
-          alignSelf={"center"}
-          color={"whitesmoke"}
-          textAlign={"center"}
-          fontSize={20}
-          variant={"inherit"}
-          paragraph={true}
-        >
-          Disfruta de la Presencia de Dios en nuestro auditorio. Estamos
-          abiertos los domingos en el horario 9:30 AM.
-          <br /> Tambien puedes disfrutar de nuestros grupos de conexiones:
-          Grupo parejas, Grupo de jovenes, Grupo de mujeres, entre otros. <br />
-          Te invitamos tambien a los grupos de sanacion y hacedores de
-          disipulos. ¡Te Esperamos!
-        </Typography>
+        <Fade left duration={3000}>
+          <Typography
+            alignSelf={"center"}
+            color={"whitesmoke"}
+            textAlign={"center"}
+            fontSize={30}
+            fontStyle={"oblique"}
+            paddingBottom={5}
+          >
+            ¡Iglesia CVM Barranquilla te invita a visitarnos de manera
+            presencial!
+          </Typography>
+        </Fade>
+        <Fade right duration={3000}>
+          <Typography
+            alignSelf={"center"}
+            color={"whitesmoke"}
+            textAlign={"center"}
+            fontSize={20}
+            component={"span"}
+            variant={"body2"}
+            paragraph={true}
+          >
+            Disfruta de la Presencia de Dios en nuestro auditorio. Estamos
+            abiertos los domingos en el horario 9:30 AM. Tambien puedes
+            disfrutar de nuestros grupos de conexiones: Grupo parejas, Grupo de
+            jovenes, Grupo de mujeres, entre otros. Te invitamos tambien a los
+            grupos de sanacion y hacedores de disipulos. ¡Te Esperamos!
+          </Typography>
+        </Fade>
       </div>
       <div
-        style={{ height: 600 }}
+        style={{ height: "auto" }}
         className="bg-zinc-100 m-auto justify-center align-middle pt-20"
-        sx
       >
-        <Typography
-          alignSelf={"center"}
-          color={"black"}
-          textAlign={"center"}
-          fontStyle={"oblique"}
-          variant={"h3"}
-        >
-          VISIÓN
-        </Typography>
-        <Typography
-          alignSelf={"center"}
-          color={"black"}
-          textAlign={"center"}
-          variant={"h5"}
-        >
-          <p>
+        <Slide top>
+          <Typography
+            alignSelf={"center"}
+            color={"black"}
+            textAlign={"center"}
+            fontStyle={"oblique"}
+            variant={"h3"}
+          >
+            VISIÓN
+          </Typography>
+          <Typography
+            alignSelf={"center"}
+            color={"black"}
+            textAlign={"center"}
+            justifyContent={"center"}
+            variant={"subtitle2"}
+            fontSize={20}
+          >
             Ser una Iglesia que en Cristo restaura y fortalece integralmente a
             toda la familia.
-          </p>
-        </Typography>
+          </Typography>
+        </Slide>
 
         <div className="grid grid-cols-2">
           <div
-            style={{ height: 400 }}
+            style={{ height: "auto" }}
             className=" m-auto justify-center align-middle pt-10"
-            sx
           >
-            <Typography
-              alignSelf={"center"}
-              color={"black"}
-              textAlign={"center"}
-              fontStyle={"oblique"}
-              paddingBottom={4}
-              variant={"h4"}
-            >
-              VALORES
-            </Typography>
-            <Typography
-              alignSelf={"center"}
-              color={"black"}
-              textAlign={"left"}
-              fontSize={20}
-              variant={"inherit"}
-              paragraph={true}
-            >
-              <Grid item>
-                <List
-                  style={{
-                    alignItems: "center",
-                  }}
-                >
-                  <ListItem
-                    style={{
-                      justifyContent: "center",
-                      textAlign: "left",
-                    }}
-                  >
+            <LightSpeed left>
+              <Typography
+                alignSelf={"center"}
+                color={"black"}
+                textAlign={"center"}
+                fontStyle={"oblique"}
+                paddingBottom={4}
+                variant={"h4"}
+              >
+                VALORES
+              </Typography>
+              <Typography
+                alignSelf={"center"}
+                color={"black"}
+                textAlign={"left"}
+                fontSize={20}
+                variant={"inherit"}
+                paragraph={true}
+              >
+                <Grid container item spacing={2} direction={"column"}>
+                  <Grid item spacing={2} direction={"column"}>
                     FAMILIA
-                  </ListItem>
-                  <ListItem
-                    style={{
-                      justifyContent: "center",
-                      textAlign: "left",
-                    }}
-                  >
+                  </Grid>
+                  <Grid item spacing={2} direction={"column"}>
                     INTIMIDAD
-                  </ListItem>
-                  <ListItem
-                    style={{
-                      justifyContent: "center",
-                      textAlign: "left",
-                    }}
-                  >
+                  </Grid>
+                  <Grid item spacing={2} direction={"column"}>
                     RELACIONES
-                  </ListItem>
-                  <ListItem
-                    style={{
-                      justifyContent: "center",
-                      textAlign: "left",
-                    }}
-                  >
+                  </Grid>
+                  <Grid item spacing={2} direction={"column"}>
                     LIDERAZGO
-                  </ListItem>
-                </List>
-              </Grid>
-            </Typography>
+                  </Grid>
+                </Grid>
+              </Typography>
+            </LightSpeed>
           </div>
           <div
-            style={{ height: 400 }}
+            style={{ height: "auto" }}
             className=" m-auto justify-center align-middle p-10 "
           >
-            <Typography
-              alignSelf={"center"}
-              color={"black"}
-              textAlign={"center"}
-              fontStyle={"oblique"}
-              paddingBottom={4}
-              variant={"h4"}
-            >
-              ADN
-            </Typography>
-            <Typography
-              alignSelf={"center"}
-              color={"black"}
-              textAlign={"left"}
-              fontSize={20}
-              variant={"inherit"}
-              paragraph={true}
-            >
-              <Grid item>
-                <List
-                  style={{
-                    alignItems: "center",
-                  }}
-                >
-                  <ListItem
-                    style={{
-                      justifyContent: "center",
-                      textAlign: "left",
-                    }}
-                  >
+            <LightSpeed right>
+              <Typography
+                alignSelf={"center"}
+                color={"black"}
+                textAlign={"center"}
+                fontStyle={"oblique"}
+                paddingBottom={4}
+                variant={"h4"}
+              >
+                ADN
+              </Typography>
+              <Typography
+                alignSelf={"center"}
+                color={"black"}
+                textAlign={"left"}
+                fontSize={20}
+                variant={"inherit"}
+                paragraph={true}
+              >
+                <Grid container item spacing={2} direction={"column"}>
+                  <Grid item spacing={2} direction={"column"}>
                     ADORACIÓN
-                  </ListItem>
-                  <ListItem
-                    style={{
-                      justifyContent: "center",
-                      textAlign: "left",
-                    }}
-                  >
+                  </Grid>
+                  <Grid item spacing={2} direction={"column"}>
                     PASIÓN
-                  </ListItem>
-                  <ListItem
-                    style={{
-                      justifyContent: "center",
-                      textAlign: "left",
-                    }}
-                  >
+                  </Grid>
+                  <Grid item spacing={2} direction={"column"}>
                     INTEGRIDAD
-                  </ListItem>
-                  <ListItem
-                    style={{
-                      justifyContent: "center",
-                      textAlign: "left",
-                    }}
-                  >
+                  </Grid>
+                  <Grid item spacing={2} direction={"column"}>
                     FIDELIDAD
-                  </ListItem>
-                  <ListItem
-                    style={{
-                      justifyContent: "center",
-                      textAlign: "left",
-                    }}
-                  >
+                  </Grid>
+                  <Grid item spacing={2} direction={"column"}>
                     ESFUERZO
-                  </ListItem>
-                </List>
-              </Grid>
-            </Typography>
+                  </Grid>
+                </Grid>
+              </Typography>
+            </LightSpeed>
           </div>
         </div>
       </div>
@@ -269,177 +222,118 @@ function HomeScreen() {
         <SocialBanner />
       </div>
       <div
-        style={{ height: 600 }}
+        style={{ height: "auto" }}
         className="bg-zinc-100 m-auto justify-center align-middle pt-20"
-        sx
       >
-        <Typography
-          alignSelf={"center"}
-          color={"black"}
-          textAlign={"center"}
-          fontStyle={"oblique"}
-          variant={"h3"}
-        >
-          REDES Y DEPARTAMENTOS
-        </Typography>
+        <Fade top duration={2000}>
+          <Typography
+            alignSelf={"center"}
+            color={"black"}
+            textAlign={"center"}
+            fontStyle={"oblique"}
+            variant={"h3"}
+          >
+            REDES Y DEPARTAMENTOS
+          </Typography>
+        </Fade>
 
         <div className="grid grid-cols-2 m-auto w-auto">
           <div
-            style={{ height: 400 }}
-            className=" justify-center align-middle pt-10"
-            sx
+            style={{ height: "auto" }}
+            className=" m-auto justify-center align-middle p-10 "
           >
-            <Typography
-              alignSelf={"center"}
-              color={"black"}
-              textAlign={"center"}
-              fontStyle={"oblique"}
-              paddingBottom={4}
-              variant={"h4"}
-            >
-              REDES
-            </Typography>
-            <Typography
-              alignSelf={"center"}
-              color={"black"}
-              textAlign={"left"}
-              fontSize={20}
-              variant={"inherit"}
-              paragraph={true}
-            >
-              <Grid item>
-                <List
-                  style={{
-                    alignItems: "center",
-                  }}
-                >
-                  <ListItem
-                    style={{
-                      justifyContent: "center",
-                      textAlign: "left",
-                    }}
-                  >
+            <Fade left duration={2000}>
+              <Typography
+                alignSelf={"center"}
+                color={"black"}
+                textAlign={"center"}
+                fontStyle={"oblique"}
+                paddingBottom={4}
+                variant={"h4"}
+              >
+                REDES
+              </Typography>
+              <Typography
+                alignSelf={"center"}
+                color={"black"}
+                textAlign={"left"}
+                fontSize={20}
+                variant={"inherit"}
+                paragraph={true}
+              >
+                <Grid container item spacing={2} direction={"column"}>
+                  <Grid item spacing={2} direction={"column"}>
                     PAREJAS
-                  </ListItem>
-                  <ListItem
-                    style={{
-                      justifyContent: "center",
-                      textAlign: "left",
-                    }}
-                  >
+                  </Grid>
+                  <Grid item spacing={2} direction={"column"}>
                     JOVENES
-                  </ListItem>
-                  <ListItem
-                    style={{
-                      justifyContent: "center",
-                      textAlign: "left",
-                    }}
-                  >
+                  </Grid>
+                  <Grid item spacing={2} direction={"column"}>
                     MUJERES
-                  </ListItem>
-                  <ListItem
-                    style={{
-                      justifyContent: "center",
-                      textAlign: "left",
-                    }}
-                  >
+                  </Grid>
+                  <Grid item spacing={2} direction={"column"}>
                     KIDS
-                  </ListItem>
-                </List>
-              </Grid>
-            </Typography>
+                  </Grid>
+                </Grid>
+              </Typography>
+            </Fade>
           </div>
           <div
-            style={{ height: 400 }}
-            className=" justify-center align-middle p-10 "
+            style={{ height: "auto" }}
+            className=" m-auto justify-center align-middle pt-20 "
           >
-            <Typography
-              alignSelf={"center"}
-              color={"black"}
-              textAlign={"center"}
-              fontStyle={"oblique"}
-              paddingBottom={4}
-              variant={"h4"}
-            >
-              DEPARTAMENTOS
-            </Typography>
-            <Typography
-              alignSelf={"center"}
-              color={"black"}
-              textAlign={"left"}
-              fontSize={20}
-              variant={"inherit"}
-              paragraph={true}
-            >
-              <Grid item>
-                <List
-                  style={{
-                    alignItems: "center",
-                  }}
-                >
-                  <ListItem
-                    style={{
-                      justifyContent: "center",
-                      textAlign: "left",
-                    }}
-                  >
+            <Fade right duration={2000}>
+              <Typography
+                alignSelf={"center"}
+                color={"black"}
+                textAlign={"center"}
+                fontStyle={"oblique"}
+                paddingBottom={4}
+                variant={"h4"}
+              >
+                DEPARTAMENTOS
+              </Typography>
+              <Typography
+                alignSelf={"center"}
+                color={"black"}
+                textAlign={"left"}
+                fontSize={20}
+                variant={"inherit"}
+                paragraph={true}
+              >
+                <Grid container item spacing={2} direction={"column"}>
+                  <Grid item spacing={2} direction={"column"}>
                     ADORACIÓN
-                  </ListItem>
-                  <ListItem
-                    style={{
-                      justifyContent: "center",
-                      textAlign: "left",
-                    }}
-                  >
+                  </Grid>
+                  <Grid item spacing={2} direction={"column"}>
                     AUDIOVISUALES
-                  </ListItem>
-                  <ListItem
-                    style={{
-                      justifyContent: "center",
-                      textAlign: "left",
-                    }}
-                  >
+                  </Grid>
+                  <Grid item spacing={2} direction={"column"}>
                     INFLUENCERS
-                  </ListItem>
-                  <ListItem
-                    style={{
-                      justifyContent: "center",
-                      textAlign: "left",
-                    }}
-                  >
+                  </Grid>
+                  <Grid item spacing={2} direction={"column"}>
                     CONSOLIDACION
-                  </ListItem>
-                  <ListItem
-                    style={{
-                      justifyContent: "center",
-                      textAlign: "left",
-                    }}
-                  >
+                  </Grid>
+                  <Grid item spacing={2} direction={"column"}>
                     INTERCESION
-                  </ListItem>
-                  <ListItem
-                    style={{
-                      justifyContent: "center",
-                      textAlign: "left",
-                    }}
-                  >
+                  </Grid>
+                  <Grid item spacing={2} direction={"column"}>
                     OBRA SOCIAL
-                  </ListItem>
-                </List>
-              </Grid>
-            </Typography>
+                  </Grid>
+                </Grid>
+              </Typography>
+            </Fade>
           </div>
         </div>
       </div>
       <Divider />
       <div
-        style={{ height: 400 }}
-        className="bg-zinc-100 m-auto justify-center align-middle pt-10 pl-6"
-        sx
+        style={{ height: "auto" }}
+        className="bg-zinc-800 m-auto justify-center align-middle pt-10 pl-6"
       >
         <Typography
           alignSelf={"center"}
-          color={"black"}
+          color={"whitesmoke"}
           textAlign={"center"}
           fontSize={30}
           fontStyle={"oblique"}
@@ -452,11 +346,17 @@ function HomeScreen() {
           alignItems="center"
           justify="center"
           sx={{ paddingTop: 5 }}
+          spacing={2}
         >
-          <Grid container item xs={4} alignItems="center" justify="center">
-            <Grid>
-              <CustomAudioPlayer />
-            </Grid>
+          <Grid
+            container
+            item
+            xs={4}
+            alignItems="center"
+            justify="center"
+            spacing={2}
+          >
+            <CustomAudioPlayer />
           </Grid>
         </Grid>
       </div>
@@ -466,10 +366,9 @@ function HomeScreen() {
           overflow: "hidden",
           width: "100%",
           justifyContent: "center",
-          height: 500,
+          height: "auto",
         }}
-        className="bg-zinc-100 h-96 m-auto justify-center align-middle pt-10 pl-6"
-        sx
+        className="bg-zinc-100 m-auto justify-center align-middle pt-10 pl-6"
       >
         <Typography
           alignSelf={"center"}
@@ -502,9 +401,7 @@ function HomeScreen() {
               alignItems: "center",
               height: 1000,
             }}
-          >
-            <IGEmbed url="https://www.instagram.com/p/Cinxz1nvM2f/" />
-          </div>
+          ></div>
         </div>
       </div>
 
