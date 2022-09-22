@@ -23,6 +23,7 @@
     "@mui/styles": "^5.10.3",
     "@react-spring/web": "^9.5.4",
     "@types/react-transition-group": "^4.4.5",
+    "firebase": "^9.10.0",
     "gh-pages": "^4.0.0",
     "material-ui-audio-player": "^1.7.1",
     "material-ui-image": "^3.3.2",

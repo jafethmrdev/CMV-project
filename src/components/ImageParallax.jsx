@@ -11,8 +11,13 @@ function ImageParallax() {
   return (
     <div className="w-auto">
       <div style={styles} className="bg-zinc-800 ">
-        <Parallax bgImage={pastores} strength={500} blur={true}>
-          <div style={{ height: 700, width: "100%", paddingTop: 300 }}>
+        <Parallax
+          bgImage={pastores}
+          strength={500}
+          blur={{ min: -15, max: 15 }}
+          bgImageStyle={{ height: "auto", maxWidth: "auto" }}
+        >
+          <div style={{ height:700, width: "100%", paddingTop: 300 }}>
             <Pulse>
               <Typography
                 alignSelf={"center"}

@@ -33,7 +33,7 @@ function Slideshow() {
           >
             <img
               style={{
-                objectFit: "fill",
+                objectFit: "revert-layer",
                 width: "100%",
                 justifyContent: "center",
                 alignContent: "center",
