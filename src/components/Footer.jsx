@@ -44,7 +44,7 @@ export default function StickyFooter() {
             Barranquilla - Cra 14 # 41-23
           </Typography>
           <Typography color={"whitesmoke"} variant="body2">
-            Tel:xxxxxxx | Cel: +57 (xxx) xxx-xxxx | info@xxxx.xxx
+            Tel:xxxxxxx | Cel: +57 (xxx) xxx-xxxx | info@xxxx.xxx 
           </Typography>
           <Copyright />
         </Container>
